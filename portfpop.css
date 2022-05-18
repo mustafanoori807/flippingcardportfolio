@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 300px;
+  border-radius: 12px;
+  border: 1px black solid;
+  display: flex;
+}
+
+section {
+  position: relative;
+  border-radius: 10px;
+  margin: 15px 10px;
+  padding: 20px 10px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.45);
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  position: relative;
+  width: 100vmax;
+  height: 400px;
+  display: inline-block;
+  background-image: url("header.jpg");
+  background-size: cover;
+}
+
+nav {
+  width: 100%;
+  height: 40px;
+  background-color: #85aa;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+  z-index: 4;
+  top: 0;
+}
+
+nav a {
+  font-variant: all-small-caps;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+  padding: 0 15px;
+}
+
+nav a:hover {
+  background-color: white;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-radius: 10px 10px 0 0;
+  border-color: #ffffe0;
+}
+
+#header-image {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  overflow: hidden;
+  position: absolute;
+
+}
+
+#header-image img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+}
+
+#header-image h1 {
+  display: flex;
+  bottom: 0;
+  margin: 0;
+  padding-left: 15px;
+  height: 2.8em;
+  width: 100%;
+  background-color: rgba(238, 232, 179, 0.4);
+  z-index: 2;
+  position: inherit;
+  align-items: center;
+}
+
+.window {
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid black;
+  z-index: 10;
+  padding: 10px;
+  transform: translate(-50%, -50%) scale(0);
+  transition-duration: 200ms;
+  text-align: center;
+}
+
+.window h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  pointer-events: none;
+  opacity: 0;
+}
+
+
+button {
+  border: 0;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  display: inline;
+  cursor: pointer;
+  margin: 0;
+}
+
+button:hover {
+  background-color: dimgrey !important;
+}
+
+
+h3 {
+  text-decoration: black underline;
+}
+
+.overlay.active {
+  opacity: 1;
+}
+
+.window button {
+  font-size: 1.2rem;
+  height: 40px;
+  width: 80px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 0;
+}
+
+.window.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+footer {
+  height: 55px;
+  background-color: darkgrey;
+}
